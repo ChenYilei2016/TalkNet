@@ -1,0 +1,14 @@
+server:
+  port: 9009
+spring:
+  application:
+    name: tensquare-sms #指定服务名
+rabbitmq:
+  host: 192.168.8.254
+
+ly:
+  sms:
+    accessKeyId: LTAInCic5itVRssw # 你自己的accessKeyId
+    accessKeySecret: KlvzUEs8mRCp6IYitDyHi0oVtMSIwB # 你自己的AccessKeySecret
+    signName: 乐优商城 # 签名名称
+    verifyCodeTemplate: SMS_151575279 # 模板名称
