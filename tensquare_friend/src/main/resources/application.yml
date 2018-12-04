@@ -1,27 +1,23 @@
-server: 
-  port: 9003
-spring: 
-  application:  
-    name: tensquare-qa #指定服务名
-  datasource:  
+server:
+  port: 9010
+spring:
+  application:
+    name: tensquare‐friend #指定服务名
+  datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.8.254:3306/tensquare_qa?characterEncoding=UTF8
+    url: jdbc:mysql://192.168.8.254:3306/tensquare_friend?characterEncoding=utf-8
     username: root
     password: root
-  jpa: 
-    database: MySQL
-    show-sql: true
+jpa:
+  database: mysql
+  show-sql: true
 jwt:
   config:
     key: FAS$28&^*)#fasCyl
-    ttl: 3600000
-
 eureka:
   client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://127.0.0.1:6868/eureka/
+    service‐url:
+      defaultZone: http://localhost:6868/eureka
   instance:
     lease-renewal-interval-in-seconds: 5 # 每隔5秒发送一次心跳
     lease-expiration-duration-in-seconds: 10 # 10秒不发送就过期

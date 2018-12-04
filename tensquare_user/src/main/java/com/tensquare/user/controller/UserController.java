@@ -30,7 +30,16 @@ public class UserController {
 	private UserService userService;
 	@Autowired
 	JwtUtil jwtUtil;
-	
+
+	//更新 自己的关注数  和friend的追随数
+	@PutMapping("/{userid}/{friendid}/{x}")
+	public void updateFanscountAndFollowcount(@PathVariable("userid") String userid,
+											  @PathVariable("friendid") String friendid,
+											  @PathVariable("x") String x){
+		userService.updateFanscountAndFollowcount(x,userid,friendid);
+	}
+
+
 	/**
 	 * 查询全部数据
 	 * @return

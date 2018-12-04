@@ -237,4 +237,9 @@ public class UserService {
 	public User findByMobileAndPassword(String mobile, String password) {
 		return userDao.findByMobileAndPassword(mobile,password);
 	}
+
+	public void updateFanscountAndFollowcount(String x, String userid, String friendid) {
+		userDao.updateFansCount(x,userid);
+		userDao.updateFollowCount(x,friendid);
+	}
 }
