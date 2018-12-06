@@ -1,0 +1,28 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: tensquare-manager
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+    registry-fetch-interval-seconds: 5
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+zuul:
+  routes:
+    tensquare-base:
+      serviceId: tensquare-base
+      path: /base/**
+  add-host-header: true
+  sensitive-headers:
+
+jwt:
+  config:
+    key: FAS$28&^*)#fasCyl
+    ttl: 3600000
