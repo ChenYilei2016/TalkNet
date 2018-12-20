@@ -8,3 +8,11 @@ spring:
       server:
         git:
           uri: https://gitee.com/chenyilei/tensquare.git
+  rabbitmq:
+    host: 192.168.8.254
+
+management: #暴露触发消息总线的地址
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
